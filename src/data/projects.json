@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Portfolio Qwik",
+    "description": "Portfolio super cepat menggunakan Qwik City dan Tailwind CSS.",
+    "tech": ["Qwik", "Tailwind", "TypeScript"],
+    "image": "https://picsum.photos/seed/qwik/600/400",
+    "link": "https://github.com/username/repo"
+  },
+  {
+    "id": 2,
+    "title": "E-Commerce App",
+    "description": "Aplikasi toko online dengan sistem pembayaran otomatis.",
+    "tech": ["React", "Node.js", "PostgreSQL"],
+    "image": "https://picsum.photos/seed/shop/600/400",
+    "link": "#"
+  }
+]

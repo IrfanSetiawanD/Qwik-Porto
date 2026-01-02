@@ -1,0 +1,40 @@
+/* 1. Import Tailwind CSS v4 */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* 2. Konfigurasi Dark Mode untuk Tailwind v4 */
+/* Ini memungkinkan class 'dark' di elemen <html> mengaktifkan mode gelap */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 3. Global Styles */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+/* Transisi halus saat pindah tema (Dark/Light) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-900 transition-colors duration-300;
+}
+
+/* Styling otomatis untuk elemen di dalam Dark Mode */
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* 4. Utility tambahan (Opsional) */
+@layer components {
+  .container-center {
+    @apply mx-auto max-w-6xl px-4;
+  }
+}
+
+/* 5. Styling untuk MDX Blog (Typography dasar) */
+/* Jika kamu nanti menggunakan plugin typography, ini akan sangat membantu */
+.prose {
+  @apply max-w-none text-gray-800 dark:text-gray-200;
+}

@@ -1,0 +1,34 @@
+---
+title: Memulai Perjalanan Web Dev dengan Qwik
+date: 2024-05-21
+---
+
+# Memulai Perjalanan Web Dev dengan Qwik
+
+Halo semuanya! Ini adalah artikel pertama di blog portofolio saya. Di sini, saya ingin berbagi alasan mengapa saya memilih **Qwik** sebagai framework utama untuk membangun website ini.
+
+### Mengapa Memilih Qwik?
+
+Dalam dunia web development yang sangat cepat, performa adalah segalanya. Qwik menawarkan konsep yang berbeda dari framework lain seperti React atau Vue:
+
+1.  **Resumability**: Tidak seperti _Hydration_ tradisional yang berat, Qwik memungkinkan aplikasi "melanjutkan" eksekusi di browser tepat di mana server berhenti.
+2.  **Instant On**: Website terasa sangat cepat saat pertama kali dibuka karena JavaScript hanya diunduh saat benar-benar dibutuhkan.
+3.  **Developer Experience**: Menggunakan JSX yang familiar bagi pengguna React, namun dengan optimasi yang jauh lebih baik secara otomatis.
+
+---
+
+### Contoh Kode di Qwik
+
+Berikut adalah cuplikan sederhana bagaimana cara membuat komponen tombol di Qwik yang sangat efisien:
+
+```tsx
+import { component$, useSignal } from "@builder.io/qwik";
+
+export default component$(() => {
+  const count = useSignal(0);
+
+  return (
+    <button onClick$={() => count.value++}>Jumlah Klik: {count.value}</button>
+  );
+});
+```
