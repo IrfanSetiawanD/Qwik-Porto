@@ -18,34 +18,34 @@ export default component$(() => {
   });
 
   return (
-    <header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-      <nav class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+    <header class="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/70 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/70">
+      <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link
           href="/"
-          class="text-xl font-bold tracking-tighter hover:text-blue-500 transition-colors"
+          class="text-xl font-bold tracking-tighter transition-colors hover:text-blue-500"
         >
-          DEV.PORTFOLIO
+          QWIK.PORTFOLIO
         </Link>
 
         <div class="flex items-center gap-4 md:gap-8">
-          <div class="hidden md:flex gap-6 font-medium">
+          <div class="hidden gap-6 font-medium md:flex">
             <Link
               href="/projects"
-              class="hover:text-blue-500 transition-colors"
+              class="transition-colors hover:text-blue-500"
             >
               Projects
             </Link>
-            <Link href="/blog" class="hover:text-blue-500 transition-colors">
+            <Link href="/blog" class="transition-colors hover:text-blue-500">
               Blog
             </Link>
-            <Link href="/about" class="hover:text-blue-500 transition-colors">
+            <Link href="/about" class="transition-colors hover:text-blue-500">
               About
             </Link>
           </div>
 
           <button
             onClick$={toggleTheme$}
-            class="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 hover:ring-2 ring-blue-400 transition-all"
+            class="rounded-xl bg-gray-100 p-2 ring-blue-400 transition-all hover:ring-2 dark:bg-gray-800"
             aria-label="Toggle Theme"
           >
             {state.isDark ? "🌙" : "☀️"}
